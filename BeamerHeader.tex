@@ -1,0 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Vorlage zur Verwendung mit LaTeX Beamer. Erstellt die Standart-Gruppen-    %%
+%% meetings-Präsentation.                                                     %%
+%% (C) Philipp Bielefeldt, 2018                                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Das Template
+\usetheme{CambridgeUS}
+\usecolortheme{dove}
+
+% Schaltet die "Weiter" und so Buttons aus
+\setbeamertemplate{navigation symbols}{}
+
+% Mit "appendix" Backups erstellen
+\usepackage{appendixnumberbeamer} 
+% -> nutze
+%\appendix
+%\section*{Backup}
+%\frame{\sectionpage}
+
+%% So kann man sich seine Sectionpages einstellen:
+\setbeamertemplate{section page}{
+ \begin{center}
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+   \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+ \end{center}
+}
+% -> nutze \frame{\sectionpage}

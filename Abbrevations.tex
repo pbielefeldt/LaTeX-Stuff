@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ein Header für LaTeX-Dokumente, damit man Dinge immer wieder konsequent    %%
+%% gleich schreibt. In allen Dokumenten eingebunden per                       %%
+%%   \input{/home/bielefeldt/.local/Abbrevations.tex}                         %%
+%%                                                                            %%
+%% (C) 2018 Philipp Bielefeldt                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Normale Referenzen
+\newcommand{\xdir}{\textit{X}-direction}
+\newcommand{\ydir}{\textit{Y}-direction}
+\newcommand{\zdir}{\textit{Z}-direction}
+\newcommand{\xaxis}{\textit{X}-axis}
+\newcommand{\yaxis}{\textit{Y}-axis}
+\newcommand{\zaxis}{\textit{Z}-axis}
+\newcommand{\xyplane}{\textit{XY}-plane}
+\newcommand{\xzplane}{\textit{XZ}-plane}
+\newcommand{\yzplane}{\textit{YZ}-plane}
+
+%% Programme & Tools
+\newcommand{\gfi}{\texttt{G\small{ENFIT}}\,\uppercase\expandafter{\romannumeral 1}}
+\newcommand{\gfii}{\texttt{G\small{ENFIT}}\,\uppercase\expandafter{\romannumeral 2}}
+\newcommand{\explora}{\texttt{ExPlORA}}
+\newcommand{\geant}{\texttt{Geant}}
+\newcommand{\minuit}{\texttt{M\small{INUIT}}}
+
+\newcommand{\kalman}{K\'alm\'an}
+
+%% Experimente
+\newcommand{\fopi}{\textit{FOPI}}
+\newcommand{\elsa}{\textit{ELSA}}
+\newcommand{\cbet}{\texttt{CBELSA/TAPS}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Sonstiges
+\newcommand{\ra}{\ensuremath{\Rightarrow}}
+\newcommand{\treg}{$^\text{\tiny{\textregistered}}$ }
+
+% Checkboxes
+\newcommand{\cbd}{\item[\CheckedBox]}
+\newcommand{\cbt}{\item[\Square]}
+\newcommand{\cbo}{\item[]}
+
+%% Dingbats
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{52}}
+\newcommand{\xmark}{\ding{55}}
+% http://willbenton.com/wb-images/pifont.pdf 
+% https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
+
+%% Bildunterschriften
+\newcommand{\mc}[1]{\caption*{\tiny{\color{gray} #1 }}}
+
+%% Standart-Bilder in Beamer
+%%  Erzeugt eine column mit Breite #1 (vorher unbedingt \begin{colunms} setzen!)
+%%  darin das Bild mit Namen #2 und die Unterschrift #3
+\newcommand{\bfig}[3]{
+  \column{#1\textwidth}
+  \centering
+    \begin{figure}
+      \includegraphics[width=0.95\textwidth]{#2}
+      \mc{#3}
+    \end{figure}
+}
+

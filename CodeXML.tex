@@ -1,0 +1,28 @@
+\usepackage{color}
+\usepackage{listings}
+\lstset{
+  %language=XML,
+  backgroundcolor=\color[rgb]{0.94,0.94,0.92}, 
+  frame=single, 
+  showstringspaces=false, 
+  breaklines=true, 
+  %columns=fullflexible, 
+  postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
+
+\lstdefinelanguage{XML}
+{
+  language=XML,
+  basicstyle=\ttfamily,
+  stringstyle=\color{blue},
+  commentstyle=\color{olive},
+  numberstyle=\tiny\color{violet},
+  identifierstyle=\color{blue},
+  keywordstyle=\color{magenta},
+  morestring={[b]", [s]{>}{<}, [s]{"}{"}}
+  morecomment={[s]{<?}{?>}, [s]{?}{?}, [s]{!--}{--}}
+  moredelim={[s][\color{black}]{>}{<}, [s][\color{red}]{\ }{=}}
+  % list your attributes here
+  morekeywords={type, progress, seed, debug, cbgeantvalues, storeallsteps, container, stepcontainer, particle, minenergy, bfield, OutputPath, Histos}
+}
+
