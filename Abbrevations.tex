@@ -3,7 +3,7 @@
 %% gleich schreibt. In allen Dokumenten eingebunden per                       %%
 %%   \input{/home/bielefeldt/.local/Abbrevations.tex}                         %%
 %%                                                                            %%
-%% (C) 2018 Philipp Bielefeldt                                                %%
+%% (C) 2019 Philipp Bielefeldt                                                %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Normale Referenzen
@@ -47,6 +47,10 @@
 \newcommand{\xmark}{\ding{55}}
 % http://willbenton.com/wb-images/pifont.pdf 
 % https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
+\usepackage{fontawesome}
+% \faGithub, \faGithubSquare, ...
+% \faLinkedin, \faStackExchange, \faStackOverflow \faTwitter, ...
+% see also: https://github.com/xdanaux/moderncv/blob/master/moderncviconsawesome.sty 
 
 %% Bildunterschriften
 \newcommand{\mc}[1]{\caption*{\tiny{\color{gray} #1 }}}
@@ -62,4 +66,3 @@
       \mc{#3}
     \end{figure}
 }
-
