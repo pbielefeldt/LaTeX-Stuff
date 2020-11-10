@@ -1,19 +1,69 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Vorlage zur Verwendung mit LaTeX Beamer. Erstellt die Standart-Gruppen-    %%
 %% meetings-Präsentation.                                                     %%
-%% (C) Philipp Bielefeldt, 2018                                               %%
+%% (C) Philipp Bielefeldt, 2020                                               %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Sollte im Dokument stehen …
+% \documentclass[aspectratio=169]{beamer}
+
+%% Input
+% \usepackage{etex}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+% \usepackage[ngerman]{babel}
+\usepackage[british]{babel}
+
 
 %% Das Template
 \usetheme{CambridgeUS}
 \usecolortheme{dove}
 
-% Schaltet die "Weiter" und so Buttons aus
+
+%% Schaltet die "Weiter" und so Buttons aus
 \setbeamertemplate{navigation symbols}{}
+
+%% Keine Seitenzahlen
+% \setbeamertemplate{page number in head/foot}{framenumber}
+
+%% Eigener Footer – ohne Gesamtzahl Seiten
+\setbeamertemplate{footline} 
+{ 
+	\leavevmode% 
+	\hbox{% 
+		\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,center]{footline}% 
+			\usebeamerfont{author in head/foot}
+			\insertshortauthor 
+			\hspace{8em}
+			\insertshorttitle
+			\hspace{8em}
+			\hfill
+			% \insertshortdate{}
+			\insertframenumber
+			% \inserttotalframenumber\hspace*{2ex} 
+	\end{beamercolorbox}}% 
+	\vskip0pt% 
+}
+\setbeamercolor{footline}{fg=gray, bg=white}
+
+
+%% Zeichnungen etc
+\usepackage[tight]{units}
+% \usepackage{siunitx}
+\usepackage{listings}  % Für die Code-Bespiele
+\usepackage{tikz} % Für Zeichnungen
+%\usetikzlibrary{arrows}
+%\usepackage{pstricks}
+
+
+%% Bilder in typischen Pfaden
+\graphicspath{{./img/}{./img/diagrams/}{./img/logos/}{./img/plots/}{./img/screenshots/}{./img/setup/}}
+
 
 % Mit "appendix" Backups erstellen
 \usepackage{appendixnumberbeamer} 
-% -> nutze
+% → nutze
 %\appendix
 %\section*{Backup}
 %\frame{\sectionpage}
@@ -26,4 +76,4 @@
   \end{beamercolorbox}
  \end{center}
 }
-% -> nutze \frame{\sectionpage}
+% → nutze \frame{\sectionpage}
