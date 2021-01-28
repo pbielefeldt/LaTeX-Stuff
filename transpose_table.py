@@ -30,14 +30,14 @@ with open(in_name, "r") as in_file:
 
 # todo: test all rows have same number of columns
 
-print("table")
-for r in table:
-	print(r)
+#print("table")
+#for r in table:
+#	print(r)
 
 transposed = map(list, zip(*table))
-print("transposed")
-for r in transposed:
-	print(r)
+#print("transposed")
+#for r in transposed:
+#	print(r)
 
 
 out_file = open(out_name, "w") # caution: overwrites file ...
